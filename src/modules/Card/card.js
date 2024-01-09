@@ -1,4 +1,5 @@
 import './card.css'
+import { useNavigate } from 'react-router-dom'
 
 export default function Card (props) {
     return(
@@ -8,12 +9,12 @@ export default function Card (props) {
                 <img src = {props.photo} />
             </div>
             <div className="text-box">
+                <div className='text-header'>
+                    {props.category}
+                </div>
                 <div className="title">
                     {props.title}
                 </div>
-                <p className='content'>
-                    {props.text} 
-                </p>
                 <p className='date'>
                     {props.date}
                 </p>

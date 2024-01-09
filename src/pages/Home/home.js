@@ -27,10 +27,9 @@ export default function Home() {
     return (
         <>
         <button onClick={handleClick}>Add a post</button>
-            <p>Hello</p>
         <div className='post-container'>
             {posts.map(post => (
-                <Card key={post.id} photo={'/python3.12.png'} title={post.title} text={post.content} date={post.date} />
+                <Card key={post.id} photo={'/python3.12.png'} category = {post.category} title={post.title} date={post.date} />
             ))}
         </div>
         </>
