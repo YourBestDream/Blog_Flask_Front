@@ -40,9 +40,38 @@
     margin-bottom: 10px;
 }
 
+.text-box .pair{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .text-box .date{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #858585;
     font-size: 12px;
     padding-bottom: 30px;
+}
+
+.pair .clickables{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#heart{
+    margin-top: 5px;
+}
+
+#bookmark{
+    margin-top: 5px;
+}
+
+.pair .clickables .clickable-attribute{
+    color:#858585;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-top: 2px;
+    font-size: 10px;
+    font-weight: 400px;
 }
