@@ -3,9 +3,12 @@
     padding:0;
 }
 
-body{
+.auth-wrapper{
+    position: absolute;
     width: 100%;
     height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg%20width%3D%221920%22%20height%3D%221070%22%20viewBox%3D%220%200%201920%201070%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1920%200H0V1070L1920%200Z%22%20fill%3D%22black%22%2F%3E%0A%3Cpath%20d%3D%22M0%201070L1920%201070L1920%200L0%201070Z%22%20fill%3D%22white%22%2F%3E%0A%3Cpath%20d%3D%22M203.823%20252.199H275.585C295.563%20252.199%20311.508%20235.752%20311.508%20215.69V147.279C311.508%20127.81%20295.083%20113.183%20275.585%20109.932C263.243%20107.879%20250.436%20106.945%20238.157%20107.003C225.872%20107.06%20214.147%20108.107%20203.823%20109.932C173.422%20115.305%20167.902%20126.546%20167.902%20147.279V174.661H239.747V183.787H167.902H140.941C120.058%20183.787%20101.774%20196.337%2096.0584%20220.212C89.4626%20247.578%2089.1668%20264.653%2096.0584%20293.229C101.166%20314.497%20113.361%20329.654%20134.241%20329.654H158.944V296.829C158.944%20273.115%20179.458%20252.199%20203.823%20252.199ZM199.303%20156.405C191.856%20156.405%20185.82%20150.303%20185.82%20142.756C185.82%20135.184%20191.856%20129.025%20199.303%20129.025C206.725%20129.025%20212.782%20135.184%20212.782%20142.756C212.782%20150.304%20206.725%20156.405%20199.303%20156.405ZM383.355%20220.212C378.191%20199.427%20368.336%20183.787%20347.429%20183.787H320.467V215.69C320.467%20240.425%20299.498%20261.24%20275.585%20261.24H203.823C184.17%20261.24%20167.902%20278.064%20167.902%20297.752V366.16C167.902%20385.63%20184.832%20397.086%20203.823%20402.665C226.565%20409.356%20248.371%20410.568%20275.585%20402.665C293.67%20397.434%20311.508%20386.893%20311.508%20366.16V338.78H239.747V329.653H311.508H347.429C368.31%20329.653%20376.093%20315.088%20383.355%20293.229C390.852%20270.724%20390.532%20249.081%20383.355%20220.212ZM280.109%20357.033C287.558%20357.033%20293.588%20363.136%20293.588%20370.679C293.588%20378.252%20287.558%20384.414%20280.109%20384.414C272.686%20384.414%20266.626%20378.252%20266.626%20370.679C266.626%20363.136%20272.686%20357.033%20280.109%20357.033Z%22%20fill%3D%22white%22%2F%3E%0A%3Cpath%20d%3D%22M1716.04%20817.948H1644.27C1624.3%20817.948%201608.35%20834.395%201608.35%20854.457V922.869C1608.35%20942.337%201624.77%20956.964%201644.27%20960.215C1656.62%20962.268%201669.42%20963.202%201681.7%20963.145C1693.99%20963.087%201705.71%20962.04%201716.04%20960.215C1746.44%20954.842%201751.96%20943.601%201751.96%20922.869V895.487H1680.11V886.36H1751.96H1778.92C1799.8%20886.36%201818.08%20873.81%201823.8%20849.935C1830.4%20822.569%201830.69%20805.494%201823.8%20776.918C1818.69%20755.65%201806.5%20740.493%201785.62%20740.493H1760.91V773.318C1760.91%20797.032%201740.4%20817.948%201716.04%20817.948ZM1720.56%20913.742C1728%20913.742%201734.04%20919.844%201734.04%20927.391C1734.04%20934.963%201728%20941.122%201720.56%20941.122C1713.13%20941.122%201707.08%20934.963%201707.08%20927.391C1707.08%20919.844%201713.13%20913.742%201720.56%20913.742ZM1536.5%20849.935C1541.67%20870.721%201551.52%20886.36%201572.43%20886.36H1599.39V854.457C1599.39%20829.722%201620.36%20808.907%201644.27%20808.907H1716.04C1735.69%20808.907%201751.96%20792.083%201751.96%20772.395V703.987C1751.96%20684.517%201735.03%20673.061%201716.04%20667.482C1693.29%20660.791%201671.49%20659.579%201644.27%20667.482C1626.19%20672.713%201608.35%20683.255%201608.35%20703.987V731.367H1680.11V740.494H1608.35H1572.43C1551.55%20740.494%201543.77%20755.059%201536.5%20776.919C1529.01%20799.423%201529.33%20821.066%201536.5%20849.935ZM1639.75%20713.114C1632.3%20713.114%201626.27%20707.011%201626.27%20699.468C1626.27%20691.895%201632.3%20685.733%201639.75%20685.733C1647.17%20685.733%201653.23%20691.895%201653.23%20699.468C1653.23%20707.011%201647.17%20713.114%201639.75%20713.114Z%22%20fill%3D%22black%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+    background-size: cover;
 }
 
 .signup{
@@ -13,43 +16,122 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width:700px;
-    height:700px;
-    border:1px solid #000;
-    background-color: #5d3e3e;
-    border-radius: 10%;
+    width:36.5vw;
+    border-radius: 16px;
+    background: #FFF;
+    box-shadow: 3px 4px 6px 0px rgba(0, 0, 0, 0.25);
 }
 
 form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    width: 300px;
-    margin: auto;
+    width: 79.2%;
+    height: auto;
     padding: 20px;
-    border: 1px solid #ddd;
     border-radius: 5px;
 }
 
 input {
-    margin-bottom: 10px;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-button {
+    margin-bottom: 20px;
     padding: 10px;
     border: none;
-    background-color: blue;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
+    border-bottom:2px solid #C8C8C8;
+    width: 100%;
+    color: black;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 22px;
+    transition: 0.3s linear;
 }
 
-button:hover {
-    background-color: darkblue;
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+
+input:focus{
+    outline: none;
+    border-bottom: 2px solid #9D9D9D;
+}
+
+input::placeholder{
+    color: #A9A9A9;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+form .submit-button {
+    width: 30%;
+    align-self: flex-end;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    border: 1px solid black;
+    background-color: white;
+    color: #000;
+    font-family: 'Roboto Condensed',sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.submit-button:hover {
+    color: white;
+    background-color: black;
+}
+
+.form-footer{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-redirect{
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+    color: #000;
+    font-family: 'Roboto Condensed',sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.login-redirect::after{
+    content:'';
+    position: absolute;
+    left: 0; bottom: 0;
+    opacity: 0;
+    width: 100%;
+    height: 1px;
+    background: black;
+    transition: .3s linear;
+}
+
+.login-redirect:hover::after{
+    opacity: 1;
+}
+
+.header{
+    color: #000;
+    font-family: 'Roboto Condensed', sans-serif;
+    align-self: center;
+    padding: 30px;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }

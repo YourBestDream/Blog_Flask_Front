@@ -5,6 +5,7 @@
 }
 .post-container .posts{
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(3, 1fr); 
-    gap: 60px;
+    /* gap: 100%; */
 }

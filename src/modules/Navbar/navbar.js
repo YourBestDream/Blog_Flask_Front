@@ -16,7 +16,7 @@ export default function Navbar () {
         const response = await axios.get('/logout')
         console.log(response.data.message)
         await updateLoginStatus()
-        navigate('/login')
+        navigate('/home')
         } catch (error){
             console.error("Error has occured during fetching:", error)
         }
