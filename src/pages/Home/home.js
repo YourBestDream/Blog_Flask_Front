@@ -28,9 +28,11 @@ export default function Home() {
         <>
         <button onClick={handleClick}>Add a post</button>
         <div className='post-container'>
-            {posts.map(post => (
-                <Card key={post.id} photo={'/python3.12.png'} category = {post.category} title={post.title} date={post.date} />
-            ))}
+            <div className='posts'>
+                {posts.map(post => (
+                    <Card key={post.id} id={post.id} photo={'/python3.12.png'} category = {post.category} title={post.title} date={post.date} likes={post.likes} bookmarks={post.bookmarks} liked = {post.liked} bookmarked={post.bookmarked}/>
+                ))}
+            </div>
         </div>
         </>
     );
