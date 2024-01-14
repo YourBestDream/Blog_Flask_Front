@@ -2,18 +2,21 @@ import './card.css'
 import axios from 'axios'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
+import { AuthContext } from '../AuthContext'
 
 export default function Card (props) {
     const navigate = useNavigate()
+    const {isLoggedIn} = useContext(AuthContext)
+    const logged = isLoggedIn
 
     const [heart,setHeart] = useState(props.liked)
     const [bookmarked,setBookmarked] = useState(props.bookmarked)
     const [likes,setLikes] = useState(props.likes)
     const [bookmark,setBookmark] = useState(props.bookmarks)
     
-    const logged = props.isLoggedIn
-
     const toggleHeart = async () =>{
+        console.log(logged)
         try {
             if (logged) {
                 setHeart(!heart);

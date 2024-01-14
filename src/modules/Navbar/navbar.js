@@ -1,9 +1,12 @@
 import axios from 'axios'
+import { useContext } from 'react'
 import './navbar.css'
+import { AuthContext } from '../AuthContext'
 import { useNavigate } from 'react-router-dom'
 
-export default function Navbar ({loggedIn}) {
+export default function Navbar () {
     const navigate = useNavigate()
+    const {isLoggedIn, updateLoginStatus} = useContext(AuthContext)
 
     const logoClick = () => {navigate('/home')}
     const signupClick = () => {navigate('/signup')}
@@ -12,6 +15,8 @@ export default function Navbar ({loggedIn}) {
         try{
         const response = await axios.get('/logout')
         console.log(response.data.message)
+        await updateLoginStatus()
+        navigate('/login')
         } catch (error){
             console.error("Error has occured during fetching:", error)
         }
@@ -22,7 +27,7 @@ export default function Navbar ({loggedIn}) {
     <div className="navbar">
         <div className="menu">
             <div className="logo" onClick={logoClick}>PyDevBlog</div>
-            { !loggedIn ? (
+            { !isLoggedIn ? (
             <ul className='collection'>
             <li className='icons'>
                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">

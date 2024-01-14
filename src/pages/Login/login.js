@@ -1,8 +1,12 @@
 import './login.css'
 import axios from 'axios';
+import { useContext } from 'react';
+import { AuthContext } from '../../modules/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
 export default function Login (){
+    const {updateLoginStatus} = useContext(AuthContext)
+
     const navigate = useNavigate();
     const handleLogin = async (event) => {
         event.preventDefault();
@@ -11,11 +15,11 @@ export default function Login (){
         const password = event.target.password.value;
 
         try {
-            const response = await axios.post('http://localhost:5000/login', {
+            const response = await axios.post('/login', {
                 email,
                 password
-            });
-
+            }, { withCredentials: true });
+            await updateLoginStatus()
             console.log(response.data);
             navigate('/home')
         } catch (error) {
