@@ -1,0 +1,65 @@
+.navbar{
+    margin: 0 auto;
+    max-width: 1400px;
+    width: 100%;
+}
+
+.navbar .menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    list-style-type: none;
+    overflow: hidden;
+    margin-bottom: 50px;
+    height: 50px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+
+}
+.menu .collection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.menu .collection li{
+    text-align: center;
+}
+
+.collection .logging{
+    position: relative;
+}
+
+.collection .logging::after{
+    content:'';
+    position: absolute;
+    left: 0; bottom: 0;
+    opacity: 0;
+    width: 90%;
+    height: 2px;
+    background: black;
+    transition: .3s linear;
+}
+
+.collection .logging:hover::after{
+    opacity: 1;
+}
+
+.menu li{
+    padding-right: 10px;
+}
+
+.menu .icons{
+    margin-right: 1vw;
+}
+
+.logo{
+    font-size: 28px;
+    font-weight: 700;
+}
