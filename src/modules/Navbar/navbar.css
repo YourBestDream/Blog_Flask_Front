@@ -66,8 +66,8 @@
 
 .submenu-holder{
     position: relative;
-    transition: .2s linear;
-    padding: 0;
+    justify-content: center;
+    transition: .3s linear;
 }
 
 .submenu-holder::after{
@@ -77,17 +77,21 @@
 .submenu{
     display: flex;
     visibility: hidden;
+    background: white;
     position: absolute;
+    border-radius: 0 0 10% 10%;
+    filter: drop-shadow(3px 4px 7px rgba(0, 0, 0, 0.25));
     align-items: center;
     justify-content: center;
     list-style-type: none;
     flex-direction: column;
+    z-index: 99;
 }
 
 .submenu-item{
-    padding:7px 0;
+    /* padding:7px; */
     align-self: center;
-
+    padding-left: 5px;
 }
 
 .submenu-holder:hover .submenu{
